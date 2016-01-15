@@ -1,0 +1,103 @@
+/* CSS Document */
+#menu_frontpage, #menu_webboard, #menu_chat, #menu_anime, #menu_media, #menu_book, #menu_about {
+	display:inline-block;
+	height:66px;
+	border:none;
+	cursor:pointer;
+	z-index:99;
+}
+
+#menu_frontpage { background:url(../../images/btnHome.png) 0 -132px; width:137px; }
+#menu_frontpage:hover { background-position:0 -66px; }
+.selected_frontpage { background-position:0 0 !important; cursor:default; }
+
+#menu_webboard { background:url(../../images/btnBoard.png) 0 -132px; width:136px; }
+#menu_webboard:hover { background-position:0 -66px; }
+.selected_webboard { background-position:0 0 !important; cursor:default; }
+
+#menu_chat { background:url(../../images/btnChat.png) 0 -132px; width:131px; }
+#menu_chat:hover { background-position:0 -66px; }
+.selected_chat {background-position:0 0 !important; cursor:default; }
+
+#menu_anime { background:url(../../images/btnAnime.png) 0 -132px; width:133px; }
+#menu_anime:hover { background-position:0 -66px; }
+.selected_anime { background-position:0 0 !important; }
+
+#menu_media { background:url(../../images/btnMedia.png) 0 -132px; width:132px; }
+#menu_media:hover { background-position:0 -66px; }
+.selected_media { background-position:0 0 !important; cursor:default; }
+
+#menu_book { background:url(../../images/btnBook.png) 0 -132px; width:136px; }
+#menu_book:hover { background-position:0 -66px; }
+.selected_book { background-position:0 0 !important; cursor:default; }
+
+#menu_about { background:url(../../images/btnAbout.png) 0 -132px; width:135px; }
+#menu_about:hover { background-position:0 -66px; }
+.selected_about { background-position:0 0 !important; cursor:default; }
+
+#dropdown_5, #dropdown_6 {
+	position:absolute;	
+	padding-bottom:6px;
+	z-index:99;
+	margin:-4px 0 0 -2px;
+	display:none;
+}
+#dropdown_5 { width:134px; background:url(../../images/lineDropMedia.png) center bottom no-repeat; }
+#dropdown_6 { width:138px; background:url(../../images/lineDropBook.png) center bottom no-repeat; }
+
+#menu_manga, #menu_novel, #menu_doujin, #menu_music, #menu_artwork, #menu_photo, #menu_hentai {
+	z-index:98;
+	cursor:pointer;
+	height:32px;
+}
+
+#menu_manga { background:url(../../images/btnManga.png) 0 0; }
+#menu_manga:hover { background-position:0 -64px; }
+.selected_manga { background-position:0 -32px !important; }
+.disabled_manga { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_novel { background:url(../../images/btnNovel.png) 0 0; }
+#menu_novel:hover { background-position:0 -64px; }
+.selected_novel { background-position:0 -32px !important; }
+.disabled_novel { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_doujin { background:url(../../images/btnDoujin.png) 0 0; }
+#menu_doujin:hover { background-position:0 -64px; }
+.selected_doujin { background-position:0 -32px !important; }
+.disabled_doujin { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_music { background:url(../../images/btnMusic.png) 0 0; }
+#menu_music:hover { background-position:0 -64px; }
+.selected_music { background-position:0 -32px !important; }
+.disabled_music { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_artwork { background:url(../../images/btnArtbook.png) 0 0; }
+#menu_artwork:hover { background-position:0 -64px; }
+.selected_artwork { background-position:0 -32px !important; }
+.disabled_artwork { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_photo { background:url(../../images/btnPhoto.png) 0 0; }
+#menu_photo:hover { background-position:0 -64px; }
+.selected_photo { background-position:0 -32px !important; }
+.disabled_photo { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_hentai { background:url(../../images/btnHentai.png) 0 0; }
+#menu_hentai:hover { background-position:0 -64px; }
+.selected_hentai { background-position:0 -32px !important; }
+.disabled_hentai { background-position:0 -96px !important; cursor:default !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

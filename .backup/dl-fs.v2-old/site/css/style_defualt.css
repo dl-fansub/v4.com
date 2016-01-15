@@ -1,0 +1,49 @@
+/* CSS Document */
+body {
+	margin:0px;
+	padding:0px;
+}
+
+table, body, input[type=text] {
+	font-size:11px;
+	font-family:"Verdana";
+	color:#666666;
+}
+
+a { cursor:pointer; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+*:focus { outline:none; }
+
+input[type=button] { border:none; }
+
+select {
+	font-size:11px;
+	font-family:"Verdana";
+	color:#666666;
+}
+h1 {
+	font-weight:bold;
+	font-size:180%;
+	background-color:none;
+	border-bottom:#bcc2ce solid 2px;
+	padding:0 0 5px 20px;
+	margin:5px 0 5px 0;
+	color:#333333;
+}
+h5 {
+	border-top:#0069bf solid 2px;
+	border-bottom:#d3d8dd solid 1px;
+	padding:8px 0 8px 0;
+	font-size:150%;
+	margin:5px 0 10px 0;
+}
+#exception {
+	padding:10px 10px 10px 80px;
+	margin:20px 40px 20px 0px;
+	color:#000;
+	font-size:180%;
+	font-weight:bold;
+	text-align:left;
+	background:url(../../images/warning.png) 30px 8px no-repeat;
+}
