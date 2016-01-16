@@ -1,0 +1,103 @@
+#frm_header {
+	font-size:26px;
+	font-family:"rsubold";
+	margin:0 0 10px 0;
+	padding:15px 5px 5px 10px;
+	background-color:#F7F7F7;
+}
+#frm_content { padding:8px 13px 8px 8px; }
+#frm_footer { padding:3px 30px 3px 30px; }
+box {
+	display:block;	
+}
+
+.boxin_header {
+	font-size:12px;
+	font-weight:bold;
+	color:#0166b0;
+	background-color:#e5e5e5;	
+	padding:5px 8px 5px 8px;
+	margin:10px 10px 0 10px;
+}
+box.text {
+	padding:10px;
+	font-size:12px;
+	font-family: "Tahoma";
+	color:#444 !important;
+}
+.boxin_footers {
+	font-size:12px;
+	border-left:#e5e5e5 solid 1px;
+	border-right:#e5e5e5 solid 1px;
+	border-bottom:#e5e5e5 solid 1px;
+	background-color:#f5f5f5;	
+	padding:8px 12px 8px 12px;
+	margin:0px 10px 15px 10px;
+}
+
+
+button.agree {
+	width:100%;
+	height:30px;	
+	background:#FFFFFF url(../../images/input/checkbox.png) 5px -32px no-repeat;
+	font-size:14px;
+	color:#000;
+	border:none;
+	text-align:left !important;
+	padding-left:30px;
+	margin-bottom:10px;	
+}
+button.agree:hover {
+	background:#F7F7F7 url(../../images/input/checkbox.png) 5px -32px no-repeat;
+}
+
+button.agree:active {
+	background:#F7F7F7 url(../../images/input/checkbox.png) 5px 6px no-repeat;
+}
+
+/* Button */
+#check_username, #regis_submit { width:200px; }
+#regis_cancel, #human_back { width:90px; }
+/* Textbox */
+#txt_username, #txt_password, #txt_repassword { width:125px; }
+#txt_email { width:250px; }
+.select_day { width:46px; }
+.select_month { width:110px; }
+.select_year { width:60px; }
+
+
+#txt_birthday {
+	height:25px;
+	margin:3px;
+	font-size:11px;
+	font-weight:bold;
+	background:#fbfbfb url(../../images/input/input_combobox.png) center right no-repeat;
+	border:#c8c8c8 solid 2px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	cursor:pointer;
+}
+#txt_birthday:active {
+	border:#2382c2 solid 2px !important;
+	/*background:-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#ececec));
+	background:-moz-linear-gradient(top,  #fbfbfb,  #ececec);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#ececec');*/
+}
+
+#txt_location {
+	width:210px;
+}
+
+#txt_interests {
+	width:210px;
+}
+#activate_code {
+	font-family:"Arial";
+	font-size:28px;
+	font-weight:bold;
+	color:#c22323;
+	padding:5px 0 5px 0;
+	text-align:center;
+	height:30px;
+}

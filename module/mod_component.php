@@ -1,0 +1,1 @@
+<div><?php include_once('component/com_'.$GLOBALS['component_name'].'/'.$GLOBALS['component_name'].'.php'); ?></div>

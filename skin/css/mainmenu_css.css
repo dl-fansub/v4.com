@@ -1,0 +1,99 @@
+/* CSS Document */
+#dl_background { position:relative; overflow:hidden; }
+
+#mainmenu_frame { position:relative; margin-top:4px; width:100%; height:62px; }
+
+#menu_frontpage, #menu_webboard, #menu_talk, #menu_anime, #menu_media, #menu_book, #menu_about , #menu_member , #menu_team {
+	display:inline-block;
+	height:63px;
+	border:none;
+	cursor:pointer;
+	z-index:9;
+}
+
+#menu_frontpage { background:url(../../images/btn_mainmenu_home.png) 0 -132px; width:135px; }
+#menu_frontpage:hover { background-position:0 -66px; }
+.selected_frontpage { background-position:0 0 !important; cursor:default; }
+
+#menu_webboard { background:url(../../images/btn_mainmenu_board.png) 0 -132px; width:136px; }
+#menu_webboard:hover { background-position:0 -66px; }
+.selected_webboard { background-position:0 0 !important; cursor:default; }
+
+#menu_talk { background:url(../../images/btn_mainmenu_talk.png) 0 -132px; width:131px; }
+#menu_talk:hover { background-position:0 -66px; }
+.selected_talk {background-position:0 0 !important; cursor:default; }
+
+#menu_anime { background:url(../../images/btn_mainmenu_anime.png) 0 -132px; width:134px; }
+#menu_anime:hover { background-position:0 -66px; }
+.selected_anime { background-position:0 0 !important; }
+
+#menu_media { background:url(../../images/btn_mainmenu_media.png) 0 -132px; width:131px; }
+#menu_media:hover { background-position:0 -66px; }
+.selected_media { background-position:0 0 !important; cursor:default; }
+
+#menu_book { background:url(../../images/btn_mainmenu_book.png) 0 -132px; width:136px; }
+#menu_book:hover { background-position:0 -66px; }
+.selected_book { background-position:0 0 !important; cursor:default; }
+
+#menu_about { background:url(../../images/btn_mainmenu_about.png) 0 -132px; width:137px; }
+#menu_about:hover { background-position:0 -66px; }
+.selected_about { background-position:0 0 !important; cursor:default; }
+
+#menu_member { background:url(../../images/btn_mainmenu_member.png) 0 -132px; width:137px; }
+#menu_member:hover { background-position:0 -66px; }
+.selected_member { background-position:0 0 !important; cursor:default; }
+
+#menu_team { background:url(../../images/btn_mainmenu_team.png) 0 -132px; width:137px; }
+#menu_team:hover { background-position:0 -66px; }
+.selected_team { background-position:0 0 !important; cursor:default; }
+
+#dropdown_5, #dropdown_6 {
+	position:absolute;	
+	padding-bottom:6px;
+	z-index:9;
+	margin:-4px 0 0 -2px;
+	display:none;
+}
+#dropdown_5 { width:134px; background:url(../../images/btn_media_z.png) center bottom no-repeat; }
+#dropdown_6 { width:138px; background:url(../../images/btn_book_z.png) center bottom no-repeat; }
+
+#menu_manga, #menu_novel, #menu_doujin, #menu_music, #menu_artwork, #menu_photo, #menu_hentai {
+	z-index:8;
+	cursor:pointer;
+	height:32px;
+}
+
+#menu_manga { background:url(../../images/btn_book_manga.png) 0 0; }
+#menu_manga:hover { background-position:0 -64px; }
+.selected_manga { background-position:0 -32px !important; }
+.disabled_manga { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_novel { background:url(../../images/btn_book_novel.png) 0 0; }
+#menu_novel:hover { background-position:0 -64px; }
+.selected_novel { background-position:0 -32px !important; }
+.disabled_novel { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_doujin { background:url(../../images/btn_book_doujin.png) 0 0; }
+#menu_doujin:hover { background-position:0 -64px; }
+.selected_doujin { background-position:0 -32px !important; }
+.disabled_doujin { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_music { background:url(../../images/btn_media_music.png) 0 0; }
+#menu_music:hover { background-position:0 -64px; }
+.selected_music { background-position:0 -32px !important; }
+.disabled_music { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_artwork { background:url(../../images/btn_media_artbook.png) 0 0; }
+#menu_artwork:hover { background-position:0 -64px; }
+.selected_artwork { background-position:0 -32px !important; }
+.disabled_artwork { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_photo { background:url(../../images/btn_media_photo.png) 0 0; }
+#menu_photo:hover { background-position:0 -64px; }
+.selected_photo { background-position:0 -32px !important; }
+.disabled_photo { background-position:0 -96px !important; cursor:default !important; }
+
+#menu_hentai { background:url(../../images/btn_media_hentai.png) 0 0; }
+#menu_hentai:hover { background-position:0 -64px; }
+.selected_hentai { background-position:0 -32px !important; }
+.disabled_hentai { background-position:0 -96px !important; cursor:default !important; }

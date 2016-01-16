@@ -1,0 +1,39 @@
+/* CSS Document */
+#admin_manage {
+
+}
+.admin_menu {
+	border-left:#FFF solid 6px;
+	width:200px;
+}
+.admin_mened {
+	border-left:#0069bf solid 6px;
+	color:#0069bf;
+}
+.admin_menu, .admin_mened {
+	font-size:12px;
+	font-weight:bold;
+	vertical-align:middle;
+	padding:10px 0 10px 10px;
+	margin:5px 10px 3px 10px;
+	cursor:pointer;
+}
+.admin_menu:hover {
+	border-left:#F3F3F3 solid 6px;
+	background-color:#F3F3F3;
+}
+
+#admin_naigator { margin:10px 0 15px 0; height:37px; background-color:#f3f3f3; }
+.admin_form {
+	display:block;
+	padding:5px;
+	background-color:#FFF;
+	border:#eaeaea solid 1px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.admin_config {
+	display:none;
+	position:relative;
+}

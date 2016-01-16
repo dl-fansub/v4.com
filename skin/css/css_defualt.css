@@ -1,0 +1,75 @@
+/* CSS Document */
+body {
+	margin:0px;
+	padding:0px;
+	overflow-y:scroll;
+	cursor:default;
+}
+
+table, body, input[type=text], input[type=password], textarea  {
+	font-size:11px !important;
+	font-family: "Tahoma" !important;
+	color:#666666;
+}
+td {
+	vertical-align:middle !important;
+}
+
+p { padding:2px 0 1px 0; }
+
+a { cursor:pointer; text-decoration:none; font-family: "Tahoma" !important; }
+a:hover { text-decoration:underline; }
+
+*:focus { outline:none; }
+
+input[type=button],input[type=submit] { border:none; font-family: "Tahoma" !important; }
+input[type=checkbox] { margin:1px 3px 0px 0px; cursor:pointer; }
+input[type=radio] { margin:1px 3px 0px 0px; cursor:pointer; }
+
+select {
+	font-size:11px;
+	font-family:"Tahoma" !important;
+	color:#666666;
+}
+label {
+	font-weight:bold;
+	color:#000000;
+	vertical-align:top;
+	cursor:pointer;
+	margin-right:5px;
+}
+li {
+	padding:2px;
+	word-wrap:break-word;
+	word-break:loose;
+}
+h1 {
+	font-family: "Arial" !important;
+	font-weight:bold;
+	font-size:180%;
+	background:none;
+	border-bottom:#bcc2ce solid 2px;
+	padding:0 0 5px 20px;
+	margin:5px 0 5px 0;
+	color:#333333;
+}
+
+h5 {
+	font-family: "Arial" !important;
+	font-size:120%;
+	font-weight:bold;
+	color:#333;
+	background:url(../../images/arrow_support.png) 1px 1px no-repeat;
+	margin:3px 3px 8px 3px;
+	padding:0px 10px 5px 18px;
+	border-bottom:#bcc2ce solid 2px;
+}
+#exception {
+	padding:10px 10px 10px 80px;
+	margin:20px 40px 20px 0px;
+	color:#000;
+	font-size:180%;
+	font-weight:bold;
+	text-align:left;
+	background:url(../../images/warning.png) 30px 8px no-repeat;
+}

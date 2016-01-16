@@ -1,0 +1,10 @@
+/* CSS Document */
+#login_remember:hover, #login_hideme:hover {
+	
+}
+.input_easein {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
