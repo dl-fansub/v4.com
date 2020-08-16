@@ -35,19 +35,19 @@ module.exports = {
       },
       icons: [
         {
-          src: '/favicon-16.png',
+          src: '/icon-16.png',
           sizes: '16x16',
           type: 'image/png',
           purpose: 'any maskable'
         },
         {
-          src: '/favicon-64.png',
+          src: '/icon-64.png',
           sizes: '64x64',
           type: 'image/png',
           purpose: 'any maskable'
         },
         {
-          src: '/favicon.png',
+          src: '/icon-256.png',
           sizes: '196x196',
           type: 'image/png',
           purpose: 'any maskable'
@@ -68,30 +68,6 @@ module.exports = {
         }
       ]
     }
-  },
-
-  manifest: {
-    name: 'DL-Fansub',
-    lang: 'en',
-    description: '',
-    short_name: 'DL-Fansub',
-    icons: [
-      { src: '/icon-16.png', sizes: '16x16' },
-      { src: '/icon-120.png', sizes: '120x120' },
-      { src: '/icon-144.png', sizes: '144x144' }
-    ],
-    start_url: '/',
-    display: 'fullscreen',
-    orientation: 'portrait',
-    theme_color: '#F7F7F7',
-    background_color: '#F7F7F7',
-    browser_action: {
-      default_icon: '/icon-16.png',
-      default_popup: '/'
-    }
-  },
-  workbox: {
-    // Workbox options
   },
   loading: '~/components/top-loading.vue',
   css: [
