@@ -2,29 +2,44 @@
   "name": "dl-fansub.com",
   "version": "1.0.0",
   "private": true,
+  "author": "Kananek T. <info@touno.io>",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "env-cmd nodemon --watch server server/index.js",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint:style": "stylelint **/*.{vue,css} --fix --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style"
   },
+  "nodemonConfig": {
+    "ignore": [
+      ".vm/*",
+      ".nuxt/*",
+      "tests/*"
+    ]
+  },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "babel-eslint": "^10.1.0",
+    "env-cmd": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "sass-loader": "^9.0.3",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0"
   }

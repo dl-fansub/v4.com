@@ -1,74 +1,152 @@
+/* eslint-disable nuxt/no-cjs-in-config */
+const production = !(process.env.NODE_ENV === 'development')
 
-export default {
-  /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
+module.exports = {
   mode: 'universal',
-  /*
-  ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
-  */
   target: 'server',
-  /*
-  ** Headers of the page
-  ** See https://nuxtjs.org/api/configuration-head
-  */
+  telemetry: false,
   head: {
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    titleTemplate: title => `${title ? `${title} • ` : ''}Digital Lover Fansub`
   },
-  /*
-  ** Global CSS
-  */
-  css: [
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'application-name', content: 'Digital Lover Fansub' },
+    { name: 'name', content: 'Digital Lover Fansub' },
+    { name: 'description', content: 'Digital Lover Fansub Non-Profit Thai Fansub Group', id: 'desc' },
+    { name: 'keywords', content: 'dl-fs,dl,fansub,anime,manga,novel' },
+    { name: 'viewport', content: 'width=device-width, user-scalable=no' },
+    { name: 'apple-mobile-web-app-title', content: 'Digital Lover Fansub' },
+    { name: 'author', content: 'Mr.Kananek T.' }
   ],
-  /*
-  ** Plugins to load before mounting the App
-  ** https://nuxtjs.org/guide/plugins
-  */
+  pwa: {
+    manifest: {
+      name: 'DL-Fansub',
+      lang: 'en',
+      description: '',
+      short_name: 'DL-Fansub',
+      start_url: '/',
+      display: 'fullscreen',
+      orientation: 'portrait',
+      theme_color: '#F7F7F7',
+      background_color: '#F7F7F7',
+      browser_action: {
+        default_icon: '/icon-16.png',
+        default_popup: '/'
+      },
+      icons: [
+        {
+          src: '/favicon-16.png',
+          sizes: '16x16',
+          type: 'image/png',
+          purpose: 'any maskable'
+        },
+        {
+          src: '/favicon-64.png',
+          sizes: '64x64',
+          type: 'image/png',
+          purpose: 'any maskable'
+        },
+        {
+          src: '/favicon.png',
+          sizes: '196x196',
+          type: 'image/png',
+          purpose: 'any maskable'
+        }
+      ]
+    },
+    workbox: {
+      offlinePage: ['/'],
+      runtimeCaching: [
+        {
+          urlPattern: 'https://localhost:3000/.*',
+          handler: 'networkFirst',
+          method: 'GET',
+          strategyOptions: {
+            cacheName: 'my-api-cache',
+            cacheableResponse: { statuses: [0, 200] }
+          }
+        }
+      ]
+    }
+  },
+
+  manifest: {
+    name: 'DL-Fansub',
+    lang: 'en',
+    description: '',
+    short_name: 'DL-Fansub',
+    icons: [
+      { src: '/icon-16.png', sizes: '16x16' },
+      { src: '/icon-120.png', sizes: '120x120' },
+      { src: '/icon-144.png', sizes: '144x144' }
+    ],
+    start_url: '/',
+    display: 'fullscreen',
+    orientation: 'portrait',
+    theme_color: '#F7F7F7',
+    background_color: '#F7F7F7',
+    browser_action: {
+      default_icon: '/icon-16.png',
+      default_popup: '/'
+    }
+  },
+  workbox: {
+    // Workbox options
+  },
+  loading: '~/components/top-loading.vue',
+  css: [
+    './assets/scss/index.scss'
+  ],
   plugins: [
   ],
-  /*
-  ** Auto import components
-  ** See https://nuxtjs.org/api/configuration-components
-  */
-  components: true,
-  /*
-  ** Nuxt.js dev-modules
-  */
+  components: false,
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/fontawesome',
     '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/pwa'
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {},
-  /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
+  bootstrapVue: { bootstrapCSS: false },
   build: {
+    parallel: !production,
+    cache: true,
+    extractCSS: production,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: { name: 'styles', test: /\.(css|vue)$/, chunks: 'all', enforce: true }
+        }
+      }
+    }
+  },
+  render: {
+    http2: {
+      push: true,
+      pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
+        .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+        .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+    }
+  },
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: { url: '/auth/login', method: 'post', propertyName: 'token' },
+  //         logout: { url: '/auth/logout', method: 'post' },
+  //         user: { url: '/auth/user', method: 'get', propertyName: 'user' }
+  //       }
+  //     }
+  //   },
+  //   redirect: { login: '/sign-in', logout: '/sign-in', home: '/' }
+  // },
+  server: { port: 3000, host: '0.0.0.0', timing: false },
+  axios: { baseURL: process.env.AXIOS_BASE_URL },
+  env: {
+    dev: !production
   }
 }
