@@ -1,10 +1,242 @@
 # dl-fansub.com
 
+```text
+ระบบทำงานประมาณนี้ 
+// 
+แปลสด/eng 
+encoder:แก้ raw อัพโหลดให้ใช้ 
+QC sub / Typeset ภาพ
+อัพโหลดให้ encoder 
+encode => ถ้าเป็น BD จะตรวจก่อน => ปล่อย
+```
+
+#### Member 
+- **Admin** (Producer)
+  - Admin = Producer = พระเจ้า
+- **Moderator** (Director)
+  - สตาฟทีมงาน (ตั้ง mod ประจำเรื่อง)
+  - ผู้ดูแล , add ได้ทุกอย่าง edit แล้วขึ้นเลย , แก้และดูข้อมูล user ได้ , ทำได้ทุกอย่างบนบอร์ด , ตรวจการ edit ของ user ปกติ
+- **New Moderator** (Writer)
+  - Mod ใหม่
+- **FanSub** (FanSubs)
+  - FanSub ที่เอามาแจก แอดเองได้ edit ได้ ไม่ต้องนับแต้ม
+- **Provider** (Provider)
+  - ผู้ให้บริการ lol , add ได้ทุกดอย่าง , edit แล้วขึ้นเลย , ไม่มีอำนาจพิเศษ
+  - แอดของได้ แต้มเพิ่มจากการแอด คัดเลือกคนโดน mod เอง 
+  - ข้อกำหนดในการขอ writer ให้มีกระทู้ในหมวดแจกของ 10+
+  - แอดของได้ แต้มเพิ่มจากการแอด คัดเลือกคนโดน mod เอง ไม่มีของแจกก็ปลดเป็น member
+- **Member+** (AV Actor)
+  - (ยืนยัน 18+) สูบได้ + สูบมืด
+  - โหลดปกติ + ของมืด
+  Writer ->provider 
+  - ข้อกำหนดในการขอ writer ให้มีกระทู้ในหมวดแจกของ 10+
+  - แอดของได้ แต้มเพิ่มจากการแอด คัดเลือกคนโดน mod เอง ไม่มีของแจกก็ปลดเป็น member
+  provider -> fansub
+  - fansub ที่เอามาแจก แอดเองได้ edit ได้ ไม่ต้องนับแต้ม
+  - add ได้ทุกอย่าง , edit ของตัวเองได้, edit ของคนอื่นแล้วต้องรอให้ mod ตรวจถึงขึ้น
+- **Member** (Actor)
+  - โหลดได้ปกติ แต้มเยอะ
+- **User**
+  - โหลดจำกัด แต้มน้อย
+  - ad ไม่ได้ , edit ไม่ได้ , โพสได้
+
+---
+
+เช่น 1 เพลงมีโฮสเรา กับพวก 1 2 3 4 mirror
+*********************************
+* สมมุติ ผมดู youtube แล้วเจอ vdo เกี่ยวกับเพนกวิ้น , ก็ไปโพส กระทู้ [xxxxxx vdo xxxx] แล้วเลือกหัวข้อเป็น [เพนกวิ้น]
+กระทู้นี้ก็จะไปโผล่ใน feed ของเพนกวิ้นคล้าย ๆ status ของ page ที่เรา like
+
+*ทำเป็นระบบพิมพ์ใส่ guesbook แต่เลือกให้เฉพาะเจ้าของ gb กับผู้พิมพ์เห็น
+
+ปุ่ม ติดตาม เปลี่ยนระบบ เป็น ให้ขึ้น แจ้งเตือน เหมือน แจ้งเตือนใน fb 
+
+
+---------
+ชื่อเรื่องนั้น ๆ คือ Sub-Forum , กระทู้ที่อยู่ในนั้นคือ Topic ที่ user ตั้ง
+การที่มี Sub Forum [หัวข้อ : ชื่อเรื่องนั้น ๆ ] ขึ้นมา เกิดจากการสร้าง Item บนเว็ป [ชื่อเรื่องนั้น ๆ ]
+เข้าใจตรงกันปะ =A=
+
+
+คือสมมุติ เราจะทำระบบนี้ละ แยกกระทู้ ก็ทำได้อีก 2 แบบ
+- ให้ user ตั้งเองได้ตามต้องการ
+- ให้ mod ของเรื่องนั้น ๆ ตั้งได้เท่านั้น
+ซึ่งการแจ้งเตือนของทั้ง 2 แบบก็จะแตกต่างออกไปอีกที
+
+
+player ที่ใช้สำหรับ stream เป็น player จาก freedom แล้วเอามาเปลี่ยนโลโก้กับ skin เองได้
+เซิฟแยก 3 ตัวเลย เพลง stream ฝากไฟล์
+ดึง url มาเล่นบน player
+
+
+Anime
+Visual Novel -> Manga - Novel - (Doujin)
+Media -> Music - Artwork - Photo - (Hentai)
+ - Hentai
+
+
+=Type
+Anime - Manga - Novel - Doujin
+
+Album - Artwork - Photo - Hentai
+(Classic/Modern/Gridview)
+
+Album Name [simpletext]
+- Album Pic [IMG]
+- Release Date [DD/MM/YY]
+- Anime (from) [Link to Anime-Item]
+- Artist [Artist-Item/Simpletext]
+- Tracklist
+- Download links [DLL/Torrent]
+- Sample [Title & URL/online player]
+
+Media-Artwork
+- Artwork Name [Simple Text]
+- Artwork Pic [IMG]
+- From [Anime & Manga - Item/Original Story]
+- Illust [Artist-Item/simpletext]
+- Sample Pics [IMG/choose from Online reader?]
+- Artwork-Genres [checkbox]
+- ? Online Reader
+- ? Themes [simpletext]
+- ? [Forum link]
+
+Media-Photos
+- Album Name
+- Album Pic [choose from Online viewer]
+- Description Text [Text box with Codes]
+- Pictures [Uploader]
+- Event [choose from Event-Page ?]
+- Photograph [User-Profile/Artist-Item/Simple Text]
+- ? [Forum link]
+- ? สามารถแยกแต่ละภาพลง Anime/Manga ได้ เช่นสำหรับ Cosplayer
+
+
+
+=Genre
+=FanSubs
+Name
+
+=FanSubs_Team
+user_id
+fansub_id
+
+
+=Item
+Name ชื่อ
+Genres_table ประเภท
+Review เรื่องย่อ
+created
+modified
+
+=Item
+item_id ชื่อเรื่อง
+Image_preview รูปตัวอย่าง
+ongoing ตอนปัจจุบัน (0=Complated)
+espisode ตอนทั้งหมด (0=Seires)
+release_date (timestamp)
+official_site
+theme_table ภาพรวม
+screenshot_table
+download_table   -> Stream
+fansubs_table
+created
+modified
+
+=Item_Anime
+studio ชื่อบริษัท
+
+=Item_Manga
+Author คนแต่ง
+Illust คนวาด
+
+=Item_Novel
+Author (user_id/author_id)
+
+
+=Novel_chapter
+chapter_id
+chapter
+text
+
+
+-----------------------------
+Home
+Board
+Chat
+? ->Anime - Manga - Novel
+? ->Album - Artwork - Photo
+MediaUpdate หรือศัพท์อื่น / 18+ -> - Eroge -  H -Game
+About us/Staff room
+
+
+ฉันว่าให้แสดงลิงค์โหลด กับ ลิงค์ไปหน้า item น่าจะเวิร์คสุดละมั่ง หรือคิดว่าไง
+
+credit จะรับครั้งต่อไปได้หลังจาก ผ่าน 24 ชม.  ไปนับจากที่รับครั้งล่าสุด
+แล้วถ้า online ก็ค่อยเพิ่มให้
+แล้วตั้งกระทู้ หรือ add item ก็+ เข้าไป
+
+
+
+โปรไฟล์อย่างที่บอกอะ ให้ html เสรีแบบตาราง 1 ตัวพอ
+แต่งได้หมด ว่าอยากแสดงส่วนไหนมั่ง
+คือ html เสรี ใส่พวก img ไรได้
+จริง ๆ มันมีระบบเงินเอาไว้ซื่อของไรด้วย
+เข้ามากดทุกวันเหมือนกัน
+
+
+แล้วค่อยจัดกิจกรรม เอาไว้ลดตังกัน
+
+
+-----------------------------------
+
+เพิ่ม Status ของทุกคน
+ขึ้น Update เฉพาะ Staff เหมือนทวิส 
+
+งั้นมีระบบให้เลือกกลุ่มที่แสดงได้ ?
+ให้อยู่ pannel เดียวกับ ยศพิเศษที่ซื่อหรือได้จากการโพส
+Producer หนังโลลิ  
+
+
+
+
+## Detail
+- หน่วยของ Point ที่ใช้ซื้อของในเว็บ (ตอนนี้ใช้  Gold Silver Copper) (ของที่ขายในราคา 1 P ต้องจ่ายให้ Server เท่านั้น)
+   -1 ไม่จำกัดแจกให้ใครไม่ได้
+   -2 ไม่จำกัดแจกเงินได้
+   -3 ไม่จำกัดแจกเงินได้ แจก user ไม่กำกัดเงินได้ (Admin)
+
+เมื่อคุณโดนแบน
+- Username นั้นจะไม่สามารถ Login ได้อีก
+- เครื่องของคุณจะถูก Lock ทำให้ไม่สามารถใช้ ID ใดๆ  Login ได้อีกเลย
+- การโดนแบนมีผลไปจนถึงการสมัครสมาชิกหากมีการสมัครใหม่โดยเครื่องนั้นๆ ID ใหม่จะโดนแบน ตามไปด้วย
+
+อัพ Avatar แยกจาก Profile
+ดู Youtube กัย nico ได้เลย รูปด้วย
+อัพ emo เองได้
+คุย private ได้
+
+
+Private 		/user	 	/dvgamer
+Emo 		#Text 		#id!o-o#
+
+Thumbnail 	http://img.youtube.com/vi/VIDEO_ID/#.jpg
+Thumbnail 	http://tn-skr#.smilevideo.jp/smile?i=VIDEO_ID
+#(1-3)
+
+<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm15935648?w=420&h=315"></script>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/6mLpP2F0LmQ?autoplay=1" frameborder="0"></iframe>
+
+
+
+ระบบจัดกิจกรรมในบอร์ด
+
+
 ## Build Setup
 
 ```bash
 # install dependencies
-$ npm install
+$ npm i
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -12,9 +244,6 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

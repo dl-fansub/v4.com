@@ -6,16 +6,16 @@ module.exports = {
   target: 'server',
   telemetry: false,
   head: {
-    titleTemplate: title => `${title ? `${title} • ` : ''}Digital Lover Fansub`
+    titleTemplate: title => `${title ? `${title} • ` : ''}DigitalLover Fansub`
   },
   meta: [
     { charset: 'utf-8' },
-    { name: 'application-name', content: 'Digital Lover Fansub' },
-    { name: 'name', content: 'Digital Lover Fansub' },
-    { name: 'description', content: 'Digital Lover Fansub Non-Profit Thai Fansub Group', id: 'desc' },
+    { name: 'application-name', content: 'DigitalLover Fansub' },
+    { name: 'name', content: 'DigitalLover Fansub' },
+    { name: 'description', content: 'DigitalLover Fansub Non-Profit Thai Fansub Group', id: 'desc' },
     { name: 'keywords', content: 'dl-fs,dl,fansub,anime,manga,novel' },
     { name: 'viewport', content: 'width=device-width, user-scalable=no' },
-    { name: 'apple-mobile-web-app-title', content: 'Digital Lover Fansub' },
+    { name: 'apple-mobile-web-app-title', content: 'DigitalLover Fansub' },
     { name: 'author', content: 'Mr.Kananek T.' }
   ],
   pwa: {
