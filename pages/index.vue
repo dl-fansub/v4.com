@@ -5,14 +5,7 @@
         dl-fansub.com
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
+        Documentation
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
@@ -29,3 +22,9 @@
 <script>
 export default {}
 </script>
+<style>
+.container {
+  font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: b;
+}
+</style>
