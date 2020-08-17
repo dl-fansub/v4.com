@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">
-        dl-fansub.com
+        book
       </h1>
     </div>
   </div>

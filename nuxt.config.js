@@ -87,7 +87,18 @@ module.exports = {
     '@nuxtjs/auth',
     '@nuxtjs/pwa'
   ],
+  router: {
+    linkActiveClass: 'active',
+    linkExactActiveClass: 'exact-active'
+  },
   bootstrapVue: { bootstrapCSS: false },
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: true,
+      regular: true
+    }
+  },
   build: {
     parallel: !production,
     cache: true,
