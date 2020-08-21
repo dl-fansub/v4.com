@@ -88,6 +88,7 @@ module.exports = {
     '@nuxtjs/pwa'
   ],
   router: {
+    middleware: ['auth'],
     linkActiveClass: 'active',
     linkExactActiveClass: 'exact-active'
   },
@@ -119,18 +120,18 @@ module.exports = {
         .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
     }
   },
-  // auth: {
-  //   strategies: {
-  //     local: {
-  //       endpoints: {
-  //         login: { url: '/auth/login', method: 'post', propertyName: 'token' },
-  //         logout: { url: '/auth/logout', method: 'post' },
-  //         user: { url: '/auth/user', method: 'get', propertyName: 'user' }
-  //       }
-  //     }
-  //   },
-  //   redirect: { login: '/sign-in', logout: '/sign-in', home: '/' }
-  // },
+  auth: {
+    strategies: {
+      local: {
+        //       endpoints: {
+        //         login: { url: '/auth/login', method: 'post', propertyName: 'token' },
+        //         logout: { url: '/auth/logout', method: 'post' },
+        //         user: { url: '/auth/user', method: 'get', propertyName: 'user' }
+        //       }
+      }
+    }
+    //   redirect: { login: '/sign-in', logout: '/sign-in', home: '/' }
+  },
   server: { port: 3000, host: '0.0.0.0', timing: false },
   axios: { baseURL: process.env.AXIOS_BASE_URL },
   env: {
