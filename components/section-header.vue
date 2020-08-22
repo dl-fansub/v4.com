@@ -6,17 +6,22 @@
           <img src="~/assets/logo_dlfs.png" class="d-inline-block align-top" width="360">
         </b-navbar-brand>
       </b-navbar>
-      <div class="navbar-sign d-flex">
-        <div>
-          <fa icon="user-alt" />
-          <b-form-input size="sm" placeholder="ชื่อสมาชิก" />
+      <b-form v-tabindex name="sign-in" class="navbar-sign d-block ml-5">
+        <div class="d-flex">
+          <div class="username p-1">
+            <fa icon="user-alt" />
+            <b-form-input size="sm" tabindex="1" placeholder="ชื่อสมาชิก" />
+          </div>
+          <div class="password p-1">
+            <fa icon="key" />
+            <b-form-input size="sm" tabindex="2" type="password" placeholder="รหัสผ่าน" />
+          </div>
         </div>
-        <div>
-          <fa icon="key" />
-          <b-form-input size="sm" type="password" placeholder="รหัสผ่าน" />
+        <div class="sign-register d-flex ml-1 align-items-center">
+          <a href="#" class="nav-text mr-1">สมัครสมาชิก</a> / <a href="#" class="nav-text ml-1">ลืมรหัสผ่าน</a> หรือเชื่อมต่อกับ
         </div>
-      </div>
-      <b-navbar class="navbar-top pb-0 d-flex justify-content-center">
+      </b-form>
+      <b-navbar class="navbar-top px-1 pb-0 d-flex justify-content-center">
         <b-navbar-nav class="w-100">
           <b-nav-item to="/" exact class="flex-fill p-1 px-0">
             <div class="icon px-2 d-flex justify-content-center">
@@ -87,6 +92,28 @@
   );
 }
 
+.navbar-sign {
+  min-height: 4.5em;
+
+  div {
+    > .svg-inline--fa {
+      position: absolute;
+      margin: 0.47em 0 0 0.5em;
+      font-size: 0.87rem;
+      color: #00569b;
+    }
+
+    > .form-control {
+      padding-left: 2.2em;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.sign-register {
+  font-size: 0.8rem;
+}
+
 .navbar {
   .navbar-nav {
     border-radius: 6px 6px 0 0;
@@ -119,7 +146,7 @@
       //   );
 
       &:hover {
-        color: #2297c2eb;
+        color: #0186c5eb;
       }
 
       &.active {

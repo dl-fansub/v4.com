@@ -11,3 +11,19 @@
 .font-thai {
   font-family: 'rsu', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#__nuxt {
+  font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+
+  a.nav-text {
+    color: #0865b2;
+    padding: 1px 3px 1px 3px;
+    border-radius: 3px;
+
+    &:hover {
+      color: #fff;
+      background-color: #0865b2;
+      text-decoration: none;
+    }
+  }
+}
