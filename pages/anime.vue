@@ -13,9 +13,3 @@ export default {
   auth: false
 }
 </script>
-<style>
-.container {
-  font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-}
-</style>
