@@ -26,4 +26,15 @@
       text-decoration: none;
     }
   }
+
+  .main-app {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template:
+      "linear-header" 270px
+      "site-content" 1fr
+      "bottom-menu" auto
+      "linear-footer" 60px;
+  }
 }

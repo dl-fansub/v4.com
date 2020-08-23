@@ -187,6 +187,7 @@ export default {
 
         &:first-child {
           border-left: none;
+          padding-left: 0;
         }
       }
     }

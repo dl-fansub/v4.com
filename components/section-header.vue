@@ -21,60 +21,15 @@
           <a href="#" class="nav-text mr-1">สมัครสมาชิก</a> / <a href="#" class="nav-text ml-1">ลืมรหัสผ่าน</a> หรือเชื่อมต่อกับ
         </div>
       </b-form>
-      <b-navbar class="navbar-top px-1 pb-0 d-flex justify-content-center">
+      <b-navbar class="navbar-top px-1 pb-0 d-sm-none d-md-flex justify-content-center">
         <b-navbar-nav class="w-100">
-          <b-nav-item to="/" exact class="flex-fill p-1 px-0">
+          <b-nav-item v-for="(e, i) in menuItem" :key="i" :to="e.route" :exact="i == 0" class="flex-fill p-1 px-0">
             <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="home" />
+              <fa class="d-md-none d-lg-block" :icon="e.icon" />
             </div>
             <div class="menu pt-1">
-              <span class="name font-thai">หน้าแรก</span>
-              <span class="small">HOME</span>
-            </div>
-          </b-nav-item>
-          <b-nav-item to="/anime" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="video" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai">อนิเมะ</span>
-              <span class="small">ANIME</span>
-            </div>
-          </b-nav-item>
-          <b-nav-item to="/media" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="images" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai">มีเดีย</span>
-              <span class="small">MEDIA</span>
-            </div>
-          </b-nav-item>
-          <b-nav-item to="/book" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="book" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai">หนังสือ</span>
-              <span class="small">BOOK</span>
-            </div>
-          </b-nav-item>
-          <b-nav-item to="/webboard" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="comments" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai">เว็บบอร์ด</span>
-              <span class="small">WEBBOARD</span>
-            </div>
-          </b-nav-item>
-          <b-nav-item to="/about" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa icon="mug-hot" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai">เกี่ยวกับเรา</span>
-              <span class="small">ABOUT US</span>
+              <span class="name font-thai" v-text="e.th" />
+              <span class="small" v-text="e.en" />
             </div>
           </b-nav-item>
         </b-navbar-nav>
@@ -82,6 +37,22 @@
     </b-container>
   </section>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      menuItem: [
+        { th: 'หน้าแรก', en: 'home', route: '/', icon: 'home' },
+        { th: 'อนิเมะ', en: 'anime', route: '/anime', icon: 'video' },
+        { th: 'มีเดีย', en: 'media', route: '/media', icon: 'images' },
+        { th: 'หนังสือ', en: 'book', route: '/book', icon: 'book' },
+        { th: 'เว็บบอร์ด', en: 'webboard', route: '/webboard', icon: 'comments' },
+        { th: 'เกี่ยวกับเรา', en: 'about us', route: '/about', icon: 'mug-hot' }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @function gradient($deg: 90deg) {
@@ -93,7 +64,7 @@
 }
 
 .navbar-sign {
-  min-height: 4.5em;
+  min-height: 4.55em;
 
   div {
     > .svg-inline--fa {
@@ -198,6 +169,7 @@
 
         .small {
           font-family: 'Segoe UI', Geneva, Verdana, sans-serif;
+          text-transform: uppercase;
           font-size: 0.5rem;
           opacity: 0.6;
         }

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-app d-flex flex-column align-items-stretch">
+  <div class="main-app">
     <section-header />
     <section class="site-content py-3">
       <nuxt />

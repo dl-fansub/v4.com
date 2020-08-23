@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">
-        webboard
+        About us
       </h1>
     </div>
   </div>

@@ -96,10 +96,7 @@ module.exports = {
   bootstrapVue: { bootstrapCSS: false },
   fontawesome: {
     component: 'fa',
-    icons: {
-      solid: true,
-      regular: true
-    }
+    icons: { solid: true, regular: true, brands: true }
   },
   build: {
     parallel: !production,

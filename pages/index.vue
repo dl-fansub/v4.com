@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row>
-      <b-col xl="16" lg="19" md="28">
+      <b-col xl="24" lg="24" md="24">
         <b-carousel
           :interval="4000"
           controls
@@ -21,7 +21,7 @@
         </b-carousel>
       </b-col>
       <b-col>
-        <h6>Top Topics</h6>
+        <h6>Top 10 Topics</h6>
       </b-col>
     </b-row>
     <b-row class="mt-3">
