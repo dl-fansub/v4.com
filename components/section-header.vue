@@ -18,7 +18,13 @@
           </div>
         </div>
         <div class="sign-register d-flex ml-1 align-items-center">
-          <a href="#" class="nav-text mr-1">สมัครสมาชิก</a> / <a href="#" class="nav-text ml-1">ลืมรหัสผ่าน</a> หรือเชื่อมต่อกับ
+          หรือเชื่อมต่อกับ
+          <b-button size="sm" class="font-thai btn-facebook ml-2">
+            <fa :icon="['fab','facebook']" />
+          </b-button>
+          <b-button size="sm" class="font-thai btn-discord ml-1">
+            <fa :icon="['fab','discord']" />
+          </b-button>
         </div>
       </b-form>
       <b-navbar class="navbar-top px-1 pb-0 d-sm-none d-md-flex justify-content-center">
@@ -83,6 +89,24 @@ export default {
 
 .sign-register {
   font-size: 0.8rem;
+
+  button {
+    line-height: 1rem;
+
+    &.btn-facebook {
+      padding: 4px 3px 0 3px;
+      background: #3a5a97;
+      border-color: #3a5a97;
+      color: #fff;
+    }
+
+    &.btn-discord {
+      padding: 4px 4px 0 4px;
+      color: white;
+      background: #7289da;
+      border-color: #7289da;
+    }
+  }
 }
 
 .navbar {

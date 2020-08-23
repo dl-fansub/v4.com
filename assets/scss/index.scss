@@ -25,6 +25,10 @@
       background-color: #0865b2;
       text-decoration: none;
     }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 
   .main-app {

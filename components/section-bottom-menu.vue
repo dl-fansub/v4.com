@@ -34,10 +34,14 @@
           </b-col>
           <b-col class="d-flex align-items-center" sm="24" md="28" lg="30">
             <div class="flex-span">
-              <a class="nav-text" to="/rules/site">เงื่อนไขการใช้งานเว็บไซต์</a>
+              <nuxt-link class="nav-text" to="/about/terms">
+                เงื่อนไขการใช้งานเว็บไซต์
+              </nuxt-link>
             </div>
             <div class="flex-span">
-              <a class="nav-text" to="/rules/fansub">นโยบายของแฟนซับ</a>
+              <nuxt-link class="nav-text" to="/about/fansubs">
+                นโยบายของแฟนซับ
+              </nuxt-link>
             </div>
           </b-col>
         </b-row>
