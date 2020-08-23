@@ -2,25 +2,34 @@
   <b-row class="pl-2">
     <b-col>
       <header class="title">
-        <span class="anim-wrapper"><h2><strong>Coming soon</strong></h2></span>
-        <span class="anim-wrapper"><h3>Are you ready?</h3></span>
+        <span class="font-thai"><h2><strong>เร็วๆ นี้</strong></h2></span>
+        <span class="font-thai"><h3>อยู่ระหว่างพัฒนา!</h3></span>
       </header>
       <div class="desc">
-        <span class="anim-wrapper"><p>Would you like to be involved in system development or not? You too can get involved with us as well.</p></span>
+        <span class="font-thai"><p>หรืออยากมีส่วนร่วมในการพัฒนาระบบนี้? คุณเองก็สามารถมีส่วนร่วมกับเราในโปรเจคนี้ได้เช่นกัน!</p></span>
       </div>
       <div>
-        <b-button href="https://discord.gg/X8V32w" target="_blank">
-          <fa :icon="['fab','discord']" /> join us with discord.
+        <b-button :href="inviteDiscord" target="_blank" class="font-thai">
+          <fa :icon="['fab','discord']" /> เข้าร่วมกับเราที่ discord.
         </b-button>
       </div>
     </b-col>
   </b-row>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      inviteDiscord: 'https://discord.gg/kUs5bau'
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .title {
   h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 8px;
   }
 
@@ -34,5 +43,6 @@
   color: white;
   background: #7289da;
   border-color: #7289da;
+  line-height: 0.7rem;
 }
 </style>

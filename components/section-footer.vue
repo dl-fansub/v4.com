@@ -3,14 +3,18 @@
     <b-container>
       <div class="copyright px-1 pt-0">
         <div class="nav-bottom p-2">
-          <fa :icon="['far','copyright']" /> Copyright 2020, TOUNO.io. All rights reserved.
+          <fa :icon="['far','copyright']" /> Copyright 2020, All rights reserved. DL-FS v{{ version }}
         </div>
       </div>
     </b-container>
   </section>
 </template>
 <script>
+const pkg = require('~/package.json')
 export default {
+  data: () => ({
+    version: pkg.version
+  })
 }
 </script>
 
