@@ -16,6 +16,11 @@
             <fa icon="key" />
             <b-form-input size="sm" tabindex="2" type="password" placeholder="รหัสผ่าน" />
           </div>
+          <div class="submit p-1">
+            <b-button type="submit" variant="success" size="sm" class="font-thai btn-discord ml-1">
+              <fa icon="arrow-circle-right" />
+            </b-button>
+          </div>
         </div>
         <div class="sign-register d-flex ml-1 align-items-center">
           หรือเชื่อมต่อกับ
@@ -69,24 +74,6 @@ export default {
   );
 }
 
-.navbar-sign {
-  min-height: 4.55em;
-
-  div {
-    > .svg-inline--fa {
-      position: absolute;
-      margin: 0.47em 0 0 0.5em;
-      font-size: 0.87rem;
-      color: #00569b;
-    }
-
-    > .form-control {
-      padding-left: 2.2em;
-      font-size: 0.7rem;
-    }
-  }
-}
-
 .sign-register {
   font-size: 0.8rem;
 
@@ -106,6 +93,28 @@ export default {
       background: #7289da;
       border-color: #7289da;
     }
+  }
+}
+
+.navbar-sign {
+  min-height: 4.55em;
+
+  div {
+    > .svg-inline--fa {
+      position: absolute;
+      margin: 0.47em 0 0 0.5em;
+      font-size: 0.87rem;
+      color: #00569b;
+    }
+
+    > .form-control {
+      padding-left: 2.2em;
+      font-size: 0.7rem;
+    }
+  }
+
+  .submit > button {
+    padding: 4px 9px 0 9px;
   }
 }
 

@@ -13,7 +13,8 @@ export const plugins = [
 ]
 
 export const state = () => ({
-  loading: false
+  loading: false,
+  inviteDiscord: 'https://discord.gg/5xa3EXp'
 })
 
 export const mutations = {

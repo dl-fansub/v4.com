@@ -9,7 +9,7 @@
         <span class="font-thai"><p>หรืออยากมีส่วนร่วมในการพัฒนาระบบนี้? คุณเองก็สามารถมีส่วนร่วมกับเราในโปรเจคนี้ได้เช่นกัน!</p></span>
       </div>
       <div>
-        <b-button :href="inviteDiscord" target="_blank" class="font-thai">
+        <b-button :href="$store.state.inviteDiscord" target="_blank" class="font-thai">
           <fa :icon="['fab','discord']" /> เข้าร่วมกับเราที่ discord.
         </b-button>
       </div>
@@ -18,11 +18,6 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      inviteDiscord: 'https://discord.gg/kUs5bau'
-    }
-  }
 }
 </script>
 
