@@ -54,14 +54,41 @@
       <b-col sm="36">
         <b-breadcrumb :items="items" />
       </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="12">
+        <h6 class="border-bottom p-2 px-1">
+          อนิเมะซีซั่นนี้
+        </h6>
+      </b-col>
       <b-col sm="24">
         <h6 class="border-bottom p-2 px-1">
           ซีซั่นที่กำลังจะฉาย
         </h6>
+        <b-row>
+          <b-col class="anime-next">
+            <div v-for="(e, i) in animeNext" :key="i" class="media-card">
+              <a href="/" class="cover">
+                <img :src="e.cover">
+              </a>
+              <a href="/" class="title" v-text="e.title" />
+            </div>
+          </b-col>
+        </b-row>
       </b-col>
+    </b-row>
+    <b-row class="mt-3">
       <b-col sm="12">
         <h6 class="border-bottom p-2 px-1">
-          อนิเมะประจำซีซั่น
+          มังงะซีขั่นนี้
+        </h6>
+      </b-col>
+      <b-col sm="24">
+        <h6 class="border-bottom p-2 px-1">
+          โฮโลไลฟ์
+        </h6>
+        <h6 class="border-bottom p-2 px-1">
+          แฟนอาร์ท
         </h6>
       </b-col>
     </b-row>
@@ -90,45 +117,45 @@ export default {
       sliding: null,
       animeSeason: [
         {
-          name: 'Re:ZERO -Starting Life in Another World- Season 2',
+          title: 'Re:ZERO -Starting Life in Another World- Season 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108632-Z8LOaPpYPK93.jpg'
         },
         {
-          name: 'The God of High School',
+          title: 'The God of High School',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116006-XasdW0bB4n18.png'
         },
         {
-          name: 'Fire Force Season 2',
+          title: 'Fire Force Season 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114236-lSQF4ljWQXdU.jpg'
         },
         {
-          name: 'My Teen Romantic Comedy SNAFU Climax!',
+          title: 'My Teen Romantic Comedy SNAFU Climax!',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108489-UqIzSjJ4eOMD.png'
         },
         {
-          name: 'Sword Art Online: Alicization - War of Underworld Part 2',
+          title: 'Sword Art Online: Alicization - War of Underworld Part 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114308-8UBiS7U9buzu.jpg'
         }
       ],
       animeNext: [
         {
-          name: 'Re:ZERO -Starting Life in Another World- Season 2',
+          title: 'Re:ZERO -Starting Life in Another World- Season 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108632-Z8LOaPpYPK93.jpg'
         },
         {
-          name: 'The God of High School',
+          title: 'The God of High School',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116006-XasdW0bB4n18.png'
         },
         {
-          name: 'Fire Force Season 2',
+          title: 'Fire Force Season 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114236-lSQF4ljWQXdU.jpg'
         },
         {
-          name: 'My Teen Romantic Comedy SNAFU Climax!',
+          title: 'My Teen Romantic Comedy SNAFU Climax!',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108489-UqIzSjJ4eOMD.png'
         },
         {
-          name: 'Sword Art Online: Alicization - War of Underworld Part 2',
+          title: 'Sword Art Online: Alicization - War of Underworld Part 2',
           cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114308-8UBiS7U9buzu.jpg'
         }
       ]
@@ -156,4 +183,57 @@ h6 {
   border-color: #7289da;
   line-height: 2em;
 }
+
+.anime-next {
+  grid-gap: 15px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  justify-content: space-between;
+
+  .media-card {
+    animation: all 0.3s linear;
+    display: grid;
+    grid-template-rows: min-content auto;
+    position: relative;
+    width: 150px;
+
+    .title {
+      color: rgb(116, 136, 153);
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-top: 10px;
+      overflow: hidden;
+      transition: color 0.2s ease;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .cover {
+      background: rgba(221, 230, 238, 0.8);
+      border-radius: 4px;
+      box-shadow:
+        0 14px 30px rgba(103, 132, 187, 0.15),
+        0 4px 4px rgba(103, 132, 187, 0.05);
+      cursor: pointer;
+      display: inline-block;
+      height: 215px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      z-index: 5;
+
+      img {
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+      }
+    }
+  }
+}
+
 </style>
