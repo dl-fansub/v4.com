@@ -1,6 +1,6 @@
 <template>
   <div class="container d-flex align-items-center h-100">
-    <coming-soon />
+    <coming-soon :develop="2" />
   </div>
 </template>
 

@@ -267,6 +267,75 @@ Thumbnail 	http://tn-skr#.smilevideo.jp/smile?i=VIDEO_ID
 อ่านข้อตกลงเรียบร้อย และขอสาบานว่าจะปฏิบัติ อย่างเคร่งครัด! ไฮ ดิจิตอลเลิฟเวอร์
 
 
+### Donate
+
+Once Time
+
+- Thanks
+
+Tier 1 - 1$
+
+- Supported Thanks
+
+Tier 2 - 5$
+
+- Supported Thanks
+- Secret Item
+- Premium Lv.1
+
+Tier 3 - 9$
+
+- Supported Thanks
+- Secret Item
+- Premium Lv.2
+
+Tier 4 - 16$
+
+- Supported Thanks
+- Secret Item
+- Premium Lv.3
+
+Tier 5 - 32$
+
+- Support Thanks
+- Secret Item
+- Premium Lv.4
+
+Tier 6 - 99$
+
+- Supported Thanks
+- Secret Item
+- Premium Lv.5
+
+
+
+### TEAM
+
+- List User from Discord role `team`.
+
+
+
+### Join
+
+Form submit jobs.
+
+- discord account
+- nickname
+- อยากทำอะไรให้กับ dl-fs
+
+
+
+### terms
+
+
+
+
+
+### fansub rules
+
+
+
+
 ## Build Setup
 
 ```bash

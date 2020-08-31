@@ -1,15 +1,18 @@
-// import VuexORM from '@vuex-orm/core'
-// import MainMenu from '~/models/mainmenu'
-// import Post from './Post'
+import axios from 'axios'
+import VuexORM from '@vuex-orm/core'
+import VuexORMAxios from '@vuex-orm/plugin-axios'
+import DasboardUpdated from '~/models/dashboard-updated.js'
+
+VuexORM.use(VuexORMAxios, { axios })
 
 // Create a new database instance.
-// const database = new VuexORM.Database()
+const database = new VuexORM.Database()
 
 // Register Models to the database.
-// database.register(MainMenu)
+database.register(DasboardUpdated)
 
 export const plugins = [
-  // VuexORM.install(database)
+  VuexORM.install(database)
 ]
 
 export const state = () => ({

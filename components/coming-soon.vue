@@ -2,8 +2,14 @@
   <b-row class="pl-2">
     <b-col>
       <header class="title">
-        <span class="font-thai"><h2><strong>เร็วๆ นี้</strong></h2></span>
-        <span class="font-thai"><h3>อยู่ระหว่างพัฒนา!</h3></span>
+        <span v-if="develop === 1" class="font-thai">
+          <h2><strong>อยู่ระหว่างพัฒนา!</strong></h2>
+          <h3>กำลังทำอยู่ ไม่รู้จะเสร็จเมื่อไหร่!</h3>
+        </span>
+        <span v-else class="font-thai">
+          <h2><strong>เร็วๆ นี้</strong></h2>
+          <h3>คุณพร้อมหรือยัง?</h3>
+        </span>
       </header>
       <div class="desc">
         <span class="font-thai"><p>หรืออยากมีส่วนร่วมในการพัฒนาระบบนี้? คุณเองก็สามารถมีส่วนร่วมกับเราในโปรเจคนี้ได้เช่นกัน!</p></span>
@@ -18,6 +24,12 @@
 </template>
 <script>
 export default {
+  props: {
+    develop: {
+      type: Number,
+      default: 1
+    }
+  }
 }
 </script>
 

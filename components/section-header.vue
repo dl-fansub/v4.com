@@ -24,15 +24,15 @@
         </div>
         <div class="sign-register d-flex ml-1 align-items-center">
           หรือเชื่อมต่อกับ
-          <b-button size="sm" class="font-thai btn-facebook ml-2">
+          <b-button disabled size="sm" variant="primary" class="font-thai btn-facebook ml-2">
             <fa :icon="['fab','facebook']" />
           </b-button>
-          <b-button size="sm" class="font-thai btn-discord ml-1">
+          <b-button size="sm" variant="primary" class="font-thai btn-discord ml-1">
             <fa :icon="['fab','discord']" />
           </b-button>
         </div>
       </b-form>
-      <b-navbar class="navbar-top px-1 pb-0 d-sm-none d-md-flex justify-content-center">
+      <b-navbar class="navbar-top px-1 pb-0 d-none d-md-flex justify-content-center">
         <b-navbar-nav class="w-100">
           <b-nav-item v-for="(e, i) in menuItem" :key="i" :to="e.route" :exact="i == 0" class="flex-fill p-1 px-0">
             <div class="icon px-2 d-flex justify-content-center">
@@ -85,6 +85,11 @@ export default {
       background: #3a5a97;
       border-color: #3a5a97;
       color: #fff;
+
+      &:disabled {
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
     }
 
     &.btn-discord {

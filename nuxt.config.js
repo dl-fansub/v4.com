@@ -74,7 +74,8 @@ module.exports = {
     './assets/scss/index.scss'
   ],
   plugins: [
-    '~/plugins/vue-tabindex.js'
+    '~/plugins/vue-tabindex.js',
+    '~/plugins/vue-orm-axios.js'
   ],
   components: false,
   buildModules: [
