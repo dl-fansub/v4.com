@@ -1,0 +1,63 @@
+<script setup lang="ts">
+import sectionHeader from './components/section-header.vue'
+import SectionFooter from './components/section-footer.vue'
+import SectionBottomMenu from './components/section-bottom-menu.vue'
+</script>
+
+<template>
+  <div class="main-app">
+    <section-header />
+    <section class="site-content py-3">
+      router-view
+    </section>
+    <!-- <SectionBottomMenu />
+    <SectionFooter /> -->
+  </div>
+</template>
+
+<style lang="scss" scroped>
+.main-app {
+  height: 100vh;
+
+  > .site-content {
+    background-color: #fff;
+    z-index: 1;
+  }
+}
+#app {
+  font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+  a.nav-text {
+    color: #0865b2;
+    padding: 1px 3px 1px 3px;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: #0865b2;
+      text-decoration: none;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  .main-app {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template:
+      "linear-header" auto
+      "site-content" 1fr
+      "bottom-menu" auto
+      "linear-footer" 60px;
+  }
+}
+
+</style>
