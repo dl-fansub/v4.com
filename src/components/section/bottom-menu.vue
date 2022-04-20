@@ -1,5 +1,5 @@
 <template>
-  <section class="bottom-menu">
+  <section>
     <b-container>
       <div class="footer">
         <b-row class="px-3">
@@ -64,9 +64,9 @@
           </b-col>
         </b-row>
       </div>
-      <div class="notice mt-3 p-2 px-3 font-thai text-center" v-text="notice" />
-      <div class="to-top font-thai text-right mt-4">
-        <a href="#">
+      <div class="notice mt-3 p-2 px-3 font-thai text-center" v-text="notice || '&nbsp;'" />
+      <div class="to-top font-thai text-right mt-4 mb-2 d-flex justify-content-end">
+        <a href="#" @click.prevent="scrollToTop">
           <span>กลับขึ้นไปด้านบน</span>
           <span class="button">
             <svg width="6" height="4" viewBox="0 0 3 2">
@@ -84,6 +84,8 @@ let fansubs: { name: string, banner?: string, url: string, disabled: boolean }[]
   { name: 'Tirkx', url: 'https://www.facebook.com/Tirkx/', disabled: false },
   { name: 'DL-FS', url: 'https://www.facebook.com/DL.Fansub/', disabled: false }
 ]
+
+const scrollToTop = () => window.scrollTo(0,0)
 
 </script>
 

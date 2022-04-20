@@ -4,7 +4,7 @@
       <div class="copyright px-1 pt-0">
         <div class="nav-bottom p-2">
           <fa :icon="['far', 'copyright']" />
-          Copyright {{ year }}, All rights reserved. DL-FS v{{ version }}, 
+          Copyright {{ year }}, All rights reserved. DL-FS v{{ version }}, design by TOUNO.io
         </div>
       </div>
     </b-container>

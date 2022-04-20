@@ -10,7 +10,7 @@ import SectionFooter from '@/components/section/footer.vue'
     <section class="site-content py-3">
       <router-view />
     </section>
-    <SectionBottomMenu />
+    <SectionBottomMenu class="bottom-menu" />
     <SectionFooter />
   </div>
 </template>
@@ -23,6 +23,12 @@ import SectionFooter from '@/components/section/footer.vue'
     background-color: #fff;
     z-index: 1;
   }
+
+  > .bottom-menu {
+    background: #fff;
+    z-index: 1;
+  }
+
 }
 #app {
   font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
