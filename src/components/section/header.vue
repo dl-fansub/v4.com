@@ -17,12 +17,8 @@ let menuItem: {
       </nav>
       <b-form name="sign-in" class="navbar-sign d-block ml-5">
         <div class="sign-register d-flex ml-1 align-items-center">
-          เชื่อมต่อกับ
-          <b-button disabled size="sm" variant="primary" class="font-thai btn-facebook ml-2">
-            <!-- <fa :icon="['fab','facebook']" /> -->
-          </b-button>
           <b-button size="sm" variant="primary" class="font-thai btn-discord ml-1">
-            <!-- <fa :icon="['fab','discord']" /> -->
+            <fa :icon="['fab','discord']" /> เข้าใช้งานระบบ
           </b-button>
         </div>
       </b-form>

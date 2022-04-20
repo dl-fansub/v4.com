@@ -1,3 +1,41 @@
+
+<script lang="ts" setup>
+let sliding = null
+
+let animeUpdate: never[] = []
+let animeSeason: never[] = []
+
+const metaNoImage = () => {
+  return '/carousel/noimage.png'
+}
+
+// const metaNoImage = () => {
+//   return new URL('./carousel/noimage.png', import.meta.url).href
+// }
+
+const onSlideStart = () => {
+  sliding = true
+}
+const onSlideEnd = () => {
+  sliding = false
+}
+
+let items = [
+  { text: 'หน้าหลัก', active: true }
+]
+
+let slideSouce = [
+  { src: null, caption: null, text: 'A' },
+  { src: null, caption: null, text: 'B' },
+  { src: null, caption: null, text: 'C' },
+  { src: null, caption: null, text: 'D' },
+  { src: null, caption: null, text: 'E' },
+  { src: null, caption: null, text: 'F' },
+  { src: null, caption: null, text: 'G' },
+  { src: null, caption: null, text: 'H' }
+]
+</script>
+
 <template>
   <b-container>
     <b-row>
@@ -129,42 +167,6 @@
   </b-container>
 </template>
 
-<script lang="ts" setup>
-let sliding = null
-
-let animeUpdate: never[] = []
-let animeSeason: never[] = []
-
-const metaNoImage = () => {
-  return '/carousel/noimage.png'
-}
-
-// const metaNoImage = () => {
-//   return new URL('./carousel/noimage.png', import.meta.url).href
-// }
-
-const onSlideStart = () => {
-  sliding = true
-}
-const onSlideEnd = () => {
-  sliding = false
-}
-
-let items = [
-  { text: 'หน้าหลัก', active: true }
-]
-
-let slideSouce = [
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' },
-  { src: null, caption: null, text: '' }
-]
-</script>
 <style lang="scss" scoped>
 .panel-header {
   h6 {
