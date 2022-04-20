@@ -3,7 +3,8 @@
     <b-container>
       <div class="copyright px-1 pt-0">
         <div class="nav-bottom p-2">
-          Copyright 2020, All rights reserved. DL-FS v{{ version }}
+          <fa :icon="['far', 'copyright']" />
+          Copyright {{ year }}, All rights reserved. DL-FS v{{ version }}, 
         </div>
       </div>
     </b-container>
@@ -11,11 +12,12 @@
 </template>
 <script lang="ts" setup>
 import { version } from "../../../package.json"
+const year = new Date().getFullYear()
 </script>
 
 <style lang="scss" scoped>
 .linear-footer {
-  background-image: url("../../assets/header-bg/default.jpg");
+  background-image: url("../../assets/header/default.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
 

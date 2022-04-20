@@ -3,7 +3,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faUserAlt,
   faKey,
-  faArrowCircleRight
+  faArrowCircleRight,
+  faEllipsisV
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -23,5 +24,6 @@ library.add(
   faCopyright,
   faCopy,
   faFacebook,
-  faDiscord
+  faDiscord,
+  faEllipsisV
 )

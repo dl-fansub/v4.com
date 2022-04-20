@@ -172,7 +172,7 @@ let fansubs: { name: string, banner?: string, url: string, disabled: boolean }[]
       }
 
       > .flex-icon {
-        background-image: url('../../assets/layout/arrow_support.png');
+        background-image: url('../../assets/arrow_support.png');
         background-repeat: no-repeat;
         background-position: 0.2em;
         padding-left: 1.5em;

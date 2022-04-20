@@ -13,5 +13,6 @@
     "lib": ["esnext", "dom", "es6"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", ".vscode", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

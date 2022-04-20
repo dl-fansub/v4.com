@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import SectionHeader from './components/section/header.vue'
-import SectionBottomMenu from './components/section/bottom-menu.vue'
-import SectionFooter from './components/section/footer.vue'
+<script lang="ts" setup>
+import SectionHeader from '@/components/section/header.vue'
+import SectionBottomMenu from '@/components/section/bottom-menu.vue'
+import SectionFooter from '@/components/section/footer.vue'
 </script>
 
 <template>
@@ -26,9 +26,6 @@ import SectionFooter from './components/section/footer.vue'
 }
 #app {
   font-family: 'Open Sans', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 
   a.nav-text {
@@ -36,6 +33,7 @@ import SectionFooter from './components/section/footer.vue'
     padding: 1px 3px 1px 3px;
     border-radius: 3px;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
     &:hover {
       color: #fff;

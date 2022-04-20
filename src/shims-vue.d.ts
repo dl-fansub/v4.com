@@ -1,7 +1,6 @@
-/// <reference types="vite/client" />
-
+/* eslint-disable */
 declare module '*.vue' {
-  import { defineComponent } from 'vue'
-  const Component: ReturnType<typeof defineComponent>
-  export default Component
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
 }

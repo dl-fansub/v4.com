@@ -62,7 +62,7 @@
             <div class="panel-header d-flex align-items-center border-bottom py-2 mb-2 px-1">
               <h6>อัพเดตอนิเมะตอนใหม่</h6>
               <b-button class="ml-auto" variant="none">
-                <!-- <fa icon="ellipsis-v" /> -->
+                <fa icon="ellipsis-v" />
               </b-button>
             </div>
             <!-- <a

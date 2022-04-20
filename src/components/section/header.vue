@@ -16,23 +16,8 @@ let menuItem: {
         </a>
       </nav>
       <b-form name="sign-in" class="navbar-sign d-block ml-5">
-        <div class="d-flex">
-          <div class="username p-1">
-            <!-- <fa icon="user-alt" /> -->
-            <b-form-input size="sm" tabindex="1" placeholder="ชื่อสมาชิก" />
-          </div>
-          <div class="password p-1">
-            <!-- <fa icon="key" /> -->
-            <b-form-input size="sm" tabindex="2" type="password" placeholder="รหัสผ่าน" />
-          </div>
-          <div class="submit p-1">
-            <b-button type="submit" variant="success" size="sm" class="font-thai btn-discord ml-1">
-              <!-- <fa icon="arrow-circle-right" /> -->
-            </b-button>
-          </div>
-        </div>
         <div class="sign-register d-flex ml-1 align-items-center">
-          หรือเชื่อมต่อกับ
+          เชื่อมต่อกับ
           <b-button disabled size="sm" variant="primary" class="font-thai btn-facebook ml-2">
             <!-- <fa :icon="['fab','facebook']" /> -->
           </b-button>
@@ -210,7 +195,7 @@ let menuItem: {
 }
 
 .linear-header {
-  background-image: url('../../assets/header-bg/default.jpg');
+  background-image: url('../../assets/header/default.jpg');
   background-position: center top;
   background-repeat: no-repeat;
 

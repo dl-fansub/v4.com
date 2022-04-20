@@ -1,5 +1,5 @@
 <template>
-  <transition v-if="$auth.loggedIn" name="fade">
+  <transition v-if="loggedIn" name="fade">
     <div class="load-bar" :style="{ opacity: !loading ? 0 : 1 }">
       <div class="load-bar-container">
         <div class="load-bar-base base1" :style="{ background: col_1 }">
@@ -21,38 +21,45 @@
   </transition>
 </template>
 
-<script>
-
-export default {
-  data: () => ({
-    col_1: '#159756',
-    col_2: '#da4733',
-    col_3: '#3b78e7',
-    col_4: '#fdba2c',
-    display: 'none',
-    timeout: 3000,
-    proc: null
-  }),
-  computed: {
-    loading () {
-      return this.$store.state.loading
-    }
-  },
-  methods: {
-    start () {
-      const vm = this
-      vm.proc = setTimeout(() => {
-        vm.$store.commit('loading', true)
-        vm.proc = null
-      }, 1000)
-    },
-    finish () {
-      this.$store.commit('loading', false)
-      if (this.proc != null) { clearTimeout(this.proc) }
-      this.proc = null
-    }
-  }
-}
+<script lang="ts" setup>
+let loggedIn = true
+let loading = false
+let col_1: string = '#159756'
+let col_2: string = '#da4733'
+let col_3: string = '#3b78e7'
+let col_4: string = '#fdba2c'
+// let display: string = 'none'
+// let timeout: Number = 3000
+// export default {
+//   data: () => ({
+//     col_1: '#159756',
+//     col_2: '#da4733',
+//     col_3: '#3b78e7',
+//     col_4: '#fdba2c',
+//     display: 'none',
+//     timeout: 3000,
+//     proc: null
+//   }),
+//   computed: {
+//     loading () {
+//       return this.$store.state.loading
+//     }
+//   },
+//   methods: {
+//     start () {
+//       const vm = this
+//       vm.proc = setTimeout(() => {
+//         vm.$store.commit('loading', true)
+//         vm.proc = null
+//       }, 1000)
+//     },
+//     finish () {
+//       this.$store.commit('loading', false)
+//       if (this.proc != null) { clearTimeout(this.proc) }
+//       this.proc = null
+//     }
+//   }
+// }
 </script>
 
 <style scoped>

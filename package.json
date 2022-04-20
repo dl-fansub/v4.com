@@ -1,11 +1,11 @@
 {
   "name": "dl-fansub.com",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "private": true,
   "author": "Kananek T. <support@touno.io>",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,7 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^2.0.6",
+    "@fortawesome/vue-fontawesome": "3.0.0-5",
     "@popperjs/core": "^2.11.5",
     "@vuex-orm/core": "^0.36.4",
     "@vuex-orm/plugin-axios": "^0.9.4",
@@ -24,6 +24,7 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@types/node": "^17.0.25",
     "@vitejs/plugin-vue": "^2.3.1",
     "sass": "^1.50.0",
     "typescript": "3.9.9",
