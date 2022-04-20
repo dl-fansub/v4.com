@@ -1,22 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
+
 import {
-  faCircleNotch,
-  faBell,
-  faRocket,
-  faServer,
-  faTrafficLight,
-  faCode,
-  faLifeRing,
-  faCoffee,
-  faBox,
-  faDatabase,
-  faUsers,
-  faUserLock,
-  faSun,
-  faMoon,
-  faGear,
-  faRightFromBracket,
-  faBars
+  faUserAlt,
+  faKey,
+  faArrowCircleRight
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -24,24 +11,17 @@ import {
   faCopy
 } from '@fortawesome/free-regular-svg-icons'
 
+import {
+  faFacebook,
+  faDiscord
+} from '@fortawesome/free-brands-svg-icons'
+
 library.add(
-  faCircleNotch,
-  faRocket,
+  faUserAlt,
+  faKey,
+  faArrowCircleRight,
   faCopyright,
   faCopy,
-  faServer,
-  faTrafficLight,
-  faCode,
-  faLifeRing,
-  faBell,
-  faCoffee,
-  faBox,
-  faDatabase,
-  faUsers,
-  faUserLock,
-  faSun,
-  faMoon,
-  faGear,
-  faRightFromBracket,
-  faBars
+  faFacebook,
+  faDiscord
 )

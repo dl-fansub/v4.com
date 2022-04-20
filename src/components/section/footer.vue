@@ -3,24 +3,19 @@
     <b-container>
       <div class="copyright px-1 pt-0">
         <div class="nav-bottom p-2">
-          <fa :icon="['far','copyright']" /> Copyright 2020, All rights reserved. DL-FS v{{ version }}
+          Copyright 2020, All rights reserved. DL-FS v{{ version }}
         </div>
       </div>
     </b-container>
   </section>
 </template>
-<script>
-// const pkg = require('~/package.json')
-export default {
-  data: () => ({
-    version: '4.0.0'
-  })
-}
+<script lang="ts" setup>
+import { version } from "../../../package.json"
 </script>
 
 <style lang="scss" scoped>
 .linear-footer {
-  background-image: url("/header-bg/default.jpg");
+  background-image: url("../../assets/header-bg/default.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
 

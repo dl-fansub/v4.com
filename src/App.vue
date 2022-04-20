@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import sectionHeader from './components/section-header.vue'
-import SectionFooter from './components/section-footer.vue'
-import SectionBottomMenu from './components/section-bottom-menu.vue'
+import SectionHeader from './components/section/header.vue'
+import SectionBottomMenu from './components/section/bottom-menu.vue'
+import SectionFooter from './components/section/footer.vue'
 </script>
 
 <template>
   <div class="main-app">
-    <section-header />
+    <SectionHeader />
     <section class="site-content py-3">
-      router-view
+      <router-view />
     </section>
-    <!-- <SectionBottomMenu />
-    <SectionFooter /> -->
+    <SectionBottomMenu />
+    <SectionFooter />
   </div>
 </template>
 

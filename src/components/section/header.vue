@@ -1,56 +1,47 @@
 <script lang="ts" setup>
-const menuItem: never[] = []
-// export default {
-//   data () {
-//     return {
-//       menuItem: [
-//         { th: 'หน้าแรก', en: 'home', route: '/', icon: 'home' },
-//         { th: 'อนิเมะ', en: 'anime', route: '/anime', icon: 'video' },
-//         { th: 'มีเดีย', en: 'media', route: '/media', icon: 'images' },
-//         { th: 'หนังสือ', en: 'book', route: '/book', icon: 'book' },
-//         { th: 'เว็บบอร์ด', en: 'webboard', route: '/webboard', icon: 'comments' },
-//         { th: 'เกี่ยวกับเรา', en: 'about us', route: '/about', icon: 'mug-hot' }
-//       ]
-//     }
-//   }
-// }
+let menuItem: {
+  route: String,
+  icon: String,
+  th: String,
+  en: String
+}[] = []
 </script>
 
 <template>
   <section class="linear-header">
     <b-container>
-      <b-navbar>
-        <b-navbar-brand to="/">
-          <img src="../assets/logo_dlfs.png" class="d-inline-block align-top" width="360">
-        </b-navbar-brand>
-      </b-navbar>
-      <b-form v-tabindex name="sign-in" class="navbar-sign d-block ml-5">
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="../../assets/logo_dlfs.png" class="d-inline-block align-top" width="360">
+        </a>
+      </nav>
+      <b-form name="sign-in" class="navbar-sign d-block ml-5">
         <div class="d-flex">
           <div class="username p-1">
-            <fa icon="user-alt" />
+            <!-- <fa icon="user-alt" /> -->
             <b-form-input size="sm" tabindex="1" placeholder="ชื่อสมาชิก" />
           </div>
           <div class="password p-1">
-            <fa icon="key" />
+            <!-- <fa icon="key" /> -->
             <b-form-input size="sm" tabindex="2" type="password" placeholder="รหัสผ่าน" />
           </div>
           <div class="submit p-1">
             <b-button type="submit" variant="success" size="sm" class="font-thai btn-discord ml-1">
-              <fa icon="arrow-circle-right" />
+              <!-- <fa icon="arrow-circle-right" /> -->
             </b-button>
           </div>
         </div>
         <div class="sign-register d-flex ml-1 align-items-center">
           หรือเชื่อมต่อกับ
           <b-button disabled size="sm" variant="primary" class="font-thai btn-facebook ml-2">
-            <fa :icon="['fab','facebook']" />
+            <!-- <fa :icon="['fab','facebook']" /> -->
           </b-button>
           <b-button size="sm" variant="primary" class="font-thai btn-discord ml-1">
-            <fa :icon="['fab','discord']" />
+            <!-- <fa :icon="['fab','discord']" /> -->
           </b-button>
         </div>
       </b-form>
-      <b-navbar class="navbar-top px-1 pb-0 d-none d-md-flex justify-content-center">
+      <!-- <b-navbar class="navbar-top px-1 pb-0 d-none d-md-flex justify-content-center">
         <b-navbar-nav class="w-100">
           <b-nav-item v-for="(e, i) in menuItem" :key="i" :to="e.route" :exact="i == 0" class="flex-fill p-1 px-0">
             <div class="icon px-2 d-flex justify-content-center">
@@ -62,7 +53,7 @@ const menuItem: never[] = []
             </div>
           </b-nav-item>
         </b-navbar-nav>
-      </b-navbar>
+      </b-navbar> -->
     </b-container>
   </section>
 </template>
@@ -219,7 +210,7 @@ const menuItem: never[] = []
 }
 
 .linear-header {
-  background-image: url("/header-bg/default.jpg");
+  background-image: url('../../assets/header-bg/default.jpg');
   background-position: center top;
   background-repeat: no-repeat;
 

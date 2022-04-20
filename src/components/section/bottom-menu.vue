@@ -10,19 +10,19 @@
           </b-col>
           <b-col class="d-flex align-items-center" sm="24" md="28" lg="30">
             <div class="flex-span">
-              <nuxt-link class="nav-text" to="/about/donate">
+              <router-link class="nav-text" to="/about/donate">
                 บริจาคสนับสนุน
-              </nuxt-link>
+              </router-link>
             </div>
             <div class="flex-span">
-              <nuxt-link class="nav-text" to="/about/team">
+              <router-link class="nav-text" to="/about/team">
                 ทีมงาน dl-fs
-              </nuxt-link>
+              </router-link>
             </div>
             <div class="flex-span">
-              <nuxt-link class="nav-text" to="/about/join">
+              <router-link class="nav-text" to="/about/join">
                 ร่วมงานกับเรา
-              </nuxt-link>
+              </router-link>
             </div>
           </b-col>
         </b-row>
@@ -34,14 +34,14 @@
           </b-col>
           <b-col class="d-flex align-items-center" sm="24" md="28" lg="30">
             <div class="flex-span">
-              <nuxt-link class="nav-text" to="/about/terms">
+              <router-link class="nav-text" to="/about/terms">
                 เงื่อนไขการใช้งานเว็บไซต์
-              </nuxt-link>
+              </router-link>
             </div>
             <div class="flex-span">
-              <nuxt-link class="nav-text" to="/about/fansubs">
+              <router-link class="nav-text" to="/about/fansubs">
                 นโยบายของแฟนซับ
-              </nuxt-link>
+              </router-link>
             </div>
           </b-col>
         </b-row>
@@ -53,14 +53,13 @@
           </b-col>
           <b-col class="d-flex align-items-center flex-wrap" sm="24" md="28" lg="30">
             <a
-              v-for="(e, i) in fansubs"
+              v-for="({ name, banner, url, disabled, }, i) in fansubs"
               :key="i"
               target="_blank"
               class="nav-img"
-              :class="{ disabled: e.disabled }"
-              :href="!e.disabled ? e.url : null"
-              :style="{ 'background-image': e.banner ? `url(/footer/support/${e.banner})` : '' }"
-              v-text="!e.banner ? e.name : null"
+              :class="{ disabled }"
+              :href="url"
+              v-text="name"
             />
           </b-col>
         </b-row>
@@ -79,18 +78,13 @@
     </b-container>
   </section>
 </template>
-<script lang="ts">
-export default {
-  data () {
-    return {
-      notice: '',
-      fansubs: [
-        { name: 'Tirkx', banner: 'tirkx.jpg', url: 'https://www.facebook.com/Tirkx/', disabled: false },
-        { name: 'DL-FS', banner: null, url: 'https://www.facebook.com/DL.Fansub/', disabled: false }
-      ]
-    }
-  }
-}
+<script lang="ts" setup>
+let notice: string = ''
+let fansubs: { name: string, banner?: string, url: string, disabled: boolean }[] = [
+  { name: 'Tirkx', url: 'https://www.facebook.com/Tirkx/', disabled: false },
+  { name: 'DL-FS', url: 'https://www.facebook.com/DL.Fansub/', disabled: false }
+]
+
 </script>
 
 <style lang="scss" scoped>
@@ -178,7 +172,7 @@ export default {
       }
 
       > .flex-icon {
-        background-image: url('../assets/layout/arrow_support.png');
+        background-image: url('../../assets/layout/arrow_support.png');
         background-repeat: no-repeat;
         background-position: 0.2em;
         padding-left: 1.5em;
