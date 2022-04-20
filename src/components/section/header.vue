@@ -4,7 +4,14 @@ let menuItem: {
   icon: String,
   th: String,
   en: String
-}[] = []
+}[] = [
+  { th: 'หน้าแรก', en: 'home', route: '/', icon: 'home' },
+  { th: 'อนิเมะ', en: 'anime', route: '/anime', icon: 'video' },
+  { th: 'มีเดีย', en: 'illustrations', route: '/media', icon: 'image' },
+  { th: 'หนังสือ', en: 'manga & novel', route: '/book', icon: 'book' },
+  { th: 'เว็บบอร์ด', en: 'webboard', route: '/b', icon: 'comment' },
+  { th: 'เกี่ยวกับเรา', en: 'about us', route: '/about', icon: 'mug-hot' }
+]
 </script>
 
 <template>
@@ -15,26 +22,28 @@ let menuItem: {
           <img src="../../assets/logo_dlfs.png" class="d-inline-block align-top" width="360">
         </a>
       </nav>
-      <b-form name="sign-in" class="navbar-sign d-block ml-5">
-        <div class="sign-register d-flex ml-1 align-items-center">
-          <b-button size="sm" variant="primary" class="font-thai btn-discord ml-1">
+      <form name="sign-in" class="navbar-sign d-block ms-5">
+        <div class="sign-register d-flex ms-1 align-items-center">
+          <b-button size="sm" variant="primary" class="font-thai btn-discord ms-1">
             <fa :icon="['fab','discord']" /> เข้าใช้งานระบบ
           </b-button>
         </div>
-      </b-form>
-      <!-- <b-navbar class="navbar-top px-1 pb-0 d-none d-md-flex justify-content-center">
-        <b-navbar-nav class="w-100">
-          <b-nav-item v-for="(e, i) in menuItem" :key="i" :to="e.route" :exact="i == 0" class="flex-fill p-1 px-0">
-            <div class="icon px-2 d-flex justify-content-center">
-              <fa class="d-md-none d-lg-block" :icon="e.icon" />
-            </div>
-            <div class="menu pt-1">
-              <span class="name font-thai" v-text="e.th" />
-              <span class="small" v-text="e.en" />
-            </div>
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-navbar> -->
+      </form>
+      <nav class="navbar navbar-expand navbar-top px-1 pb-0 d-none d-md-flex justify-content-center">
+        <ul class="navbar-nav w-100">
+          <li v-for="(e, i) in menuItem" :key="i" class="nav-item flex-fill p-1 px-0">
+            <router-link :to="e.route" :exact="i == 0" class="nav-link">
+              <div class="icon px-2 d-flex justify-content-center">
+                <fa class="d-md-none d-lg-block" :icon="e.icon" />
+              </div>
+              <div class="menu pt-1">
+                <span class="name font-thai" v-text="e.th" />
+                <span class="small" v-text="e.en" />
+              </div>
+            </router-link>
+          </li>
+        </ul>
+      </nav>
     </b-container>
   </section>
 </template>
@@ -43,7 +52,7 @@ let menuItem: {
 @function gradient($deg: 90deg) {
   @return linear-gradient(
     $deg,
-    rgba(255, 255, 255, 0) 20%,
+    rgba(88, 86, 86, 0) 20%,
     rgba(255, 255, 255, 1) 100%
   );
 }

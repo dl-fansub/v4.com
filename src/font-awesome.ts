@@ -1,6 +1,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
+  faHome,
+  faVideo,
+  faImage,
+  faBook,
+  faComment,
+  faMugHot,
   faUserAlt,
   faKey,
   faArrowCircleRight,
@@ -18,6 +24,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
+  faHome,
+  faVideo,
+  faImage,
+  faBook,
+  faComment,
+  faMugHot,
   faUserAlt,
   faKey,
   faArrowCircleRight,

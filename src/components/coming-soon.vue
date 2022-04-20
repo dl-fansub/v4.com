@@ -1,5 +1,5 @@
 <template>
-  <b-row class="pl-2">
+  <b-row class="ps-2">
     <b-col>
       <header class="title">
         <span v-if="develop === 1" class="font-thai">
