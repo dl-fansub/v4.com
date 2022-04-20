@@ -9,7 +9,7 @@ let menuItem: {
   { th: 'อนิเมะ', en: 'anime', route: '/anime', icon: 'video' },
   { th: 'มีเดีย', en: 'illustrations', route: '/media', icon: 'image' },
   { th: 'หนังสือ', en: 'manga & novel', route: '/book', icon: 'book' },
-  { th: 'เว็บบอร์ด', en: 'webboard', route: '/b', icon: 'comment' },
+  { th: 'เว็บบอร์ด', en: 'webboard', route: '/board', icon: 'comment' },
   { th: 'เกี่ยวกับเรา', en: 'about us', route: '/about', icon: 'mug-hot' }
 ]
 </script>

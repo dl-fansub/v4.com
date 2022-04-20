@@ -1,16 +1,9 @@
 <template>
   <div class="container d-flex align-items-center h-100">
-    <coming-soon />
+    <ComingSoon :develop="2" />
   </div>
 </template>
 
-<script>
-import comingSoon from '~/components/coming-soon'
-
-export default {
-  auth: false,
-  components: {
-    comingSoon
-  }
-}
+<script lang="ts" setup>
+import ComingSoon from '@/components/coming-soon.vue'
 </script>
