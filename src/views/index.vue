@@ -1,29 +1,19 @@
 
 <script lang="ts" setup>
+import { AnimeUpdated } from './index';
+
 let sliding = null
 
-let animeUpdate: {}[] = [
+let animeUpdate: AnimeUpdated[] = [
   {
-    title: 'Re:ZERO -Starting Life in Another World- Season 2',
-    cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108632-Z8LOaPpYPK93.jpg'
-  },
-  {
-    title: 'The God of High School',
-    cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116006-XasdW0bB4n18.png'
-  },
-  {
-    title: 'Fire Force Season 2',
-    cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114236-lSQF4ljWQXdU.jpg'
-  },
-  {
-    title: 'My Teen Romantic Comedy SNAFU Climax!',
-    cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108489-UqIzSjJ4eOMD.png'
-  },
-  {
-    title: 'Sword Art Online: Alicization - War of Underworld Part 2',
-    cover: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114308-8UBiS7U9buzu.jpg'
+    name: 'Tate no Yuusha no Nariagari',
+    season: 'Season 2',
+    fansub: 'Unknow',
+    episode: 3,
+    type: 'TV'
   }
 ]
+
 let animeSeason: {}[] = [
   {
     title: 'Re:ZERO -Starting Life in Another World- Season 2',
@@ -80,78 +70,6 @@ let slideSouce = [
 
 <template>
   <b-container>
-    <b-row>
-      <b-col xl="12" lg="12" md="12">
-        <div id="animeCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="/carousel/robin.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="/carousel/nami.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/carousel/noimage.png" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </b-col>
-      <b-col xl="12" lg="12" md="12">
-        <div id="mangaCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/carousel/noimage.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/carousel/noimage.png" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#mangaCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#mangaCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </b-col>
-      <b-col>
-        <div class="fb-page">
-          <h6 class="border-bottom p-2 px-1">
-            DL-Fansub FanPage
-          </h6>
-          <iframe
-            src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FDL.Fansub%2F&width=280&layout=standard&action=like&size=large&share=true&height=35&appId=755065711974797"
-            width="280"
-            height="35"
-            style="border: none; overflow: hidden;"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true"
-            allow="encrypted-media"
-          />
-        </div>
-        <div class="discord-page">
-          <h6 class="border-bottom p-2 px-1">
-            Join our communities
-          </h6>
-          <div class="text-center">
-            <b-button href="#" target="_blank" class="mt-2" block>
-              <fa :icon="['fab','discord']" /> Discord Community.
-            </b-button>
-          </div>
-        </div>
-      </b-col>
-    </b-row>
     <b-row class="mt-3">
       <b-col sm="36">
         <b-breadcrumb :items="items" />
@@ -167,23 +85,23 @@ let slideSouce = [
                 <fa icon="ellipsis-v" />
               </b-button>
             </div>
-            <!-- <a
+            <a
               v-for="(e, i) in animeUpdate"
               :key="i"
               href="/root/anime/name/id"
               :class="`card-${e.color || 'default'}`"
             >
               <div class="pt-1">
-                <b-avatar :size="26" variant="color" rounded="sm" :text="String(e.episode).padStart(2, '0')" />
+                <div class="episode" :text="String(e.episode).padStart(2, '0')" />
               </div>
               <div class="pb-2 mb-1">
-                <div class="d-block" v-text="e.name" />
+                <div class="d-block" v-text="`${e.name}${e.season ? ` - ${e.season}` : ''}`" />
                 <div class="d-flex">
                   <b-badge variant="info" v-text="e.fansub" />
                   <b-badge v-if="e.type !== 'TV Show'" class="ms-1" variant="secondary" v-text="e.type" />
                 </div>
               </div>
-            </a> -->
+            </a>
           </b-col>
         </b-row>
         <b-row>
@@ -191,7 +109,7 @@ let slideSouce = [
             <div class="panel-header d-flex align-items-center border-bottom py-2 mb-2 px-1">
               <h6>อัพเดตมังงะตอนใหม่</h6>
               <b-button class="ms-auto" variant="none">
-                <!-- <fa icon="ellipsis-v" /> -->
+                <fa icon="ellipsis-v" />
               </b-button>
             </div>
           </b-col>
@@ -218,16 +136,16 @@ let slideSouce = [
         </b-row>
       </b-col>
     </b-row>
-    <!-- <b-row class="mt-3">
+    <b-row class="mt-3">
       <b-col sm="24">
-        <h6 class="border-bottom p-2 px-1">
+        <!-- <h6 class="border-bottom p-2 px-1">
           โฮโลไลฟ์
-        </h6>
+        </h6> -->
         <h6 class="border-bottom p-2 px-1">
           แฟนอาร์ท
         </h6>
       </b-col>
-    </b-row> -->
+    </b-row>
   </b-container>
 </template>
 
@@ -264,14 +182,20 @@ let slideSouce = [
     text-decoration: none;
     font-weight: bold;
     display: grid;
-    grid-template-columns: 26px 1fr;
+    grid-template-columns: 32px 1fr;
     grid-gap: 10px;
     margin-bottom: 5px;
 
+    .episode {
+      border: #ababab 1px solid;
+      border-radius: 3px;
+      height: 32px;
+      width: 32px;
+    }
     &.card-default:hover {
       color: var(--media-text);
 
-      .b-avatar {
+      .episode {
         color: #fff;
         background-color: var(--media-text);
         transition: none;
